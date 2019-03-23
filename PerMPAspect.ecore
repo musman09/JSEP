@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="PerMPAspect" nsURI="http://www.emftext.org/language/PerMPAspect"
+    nsPrefix="PerMPAspect">
+  <eClassifiers xsi:type="ecore:EClass" name="Aspect">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pointcut" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Pointcut" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="base" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="apply" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pointcut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="advice" ordered="false"
+        upperBound="3" eType="#//Advice" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="introduction" ordered="false"
+        eType="#//Introduction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" defaultValueLiteral="All, One, Subset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="joinpoints" ordered="false"
+        lowerBound="1" upperBound="-1" eType="#//Joinpoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selectionConstraint" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Advice">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bluetooth" ordered="false"
+        eType="#//BluetoothPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="network" ordered="false"
+        eType="#//NetworkPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energy" ordered="false"
+        eType="#//EnergyConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memory" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gps" ordered="false" eType="#//GPSPerformance"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="camera" ordered="false"
+        eType="#//CameraPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="call" ordered="false" eType="#//CallPerformance"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gallery" ordered="false"
+        eType="#//GalleryPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contact" ordered="false"
+        eType="#//ContactPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="musicPlayer" ordered="false"
+        eType="#//MusicPlayerPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reminder" ordered="false"
+        eType="#//ReminderPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ringtone" ordered="false"
+        eType="#//RingtonePerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="volumeController" ordered="false"
+        eType="#//VolumeControllerPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notification" ordered="false"
+        eType="#//NotificationPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="radio" ordered="false"
+        eType="#//RadioPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="message" ordered="false"
+        eType="#//MessagePerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" ordered="false"
+        eType="#//ServicePerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" ordered="false"
+        eType="#//DatabasePerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="external" ordered="false"
+        eType="#//ExternalMemoryPerformance" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="internalMemory" ordered="false"
+        eType="#//InternalMemoryPerformance" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BluetoothPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transferTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnergyConsumed">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minEnergyAllowed" ordered="false"
+        eType="#//Energy" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxEnergyAllowed" ordered="false"
+        eType="#//Energy" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptableDelta" ordered="false"
+        eType="#//Energy" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Energy">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//EnergyUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EnergyUnit">
+    <eLiterals name="mW"/>
+    <eLiterals name="mAh" value="1"/>
+    <eLiterals name="Percentage" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalMemoryPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="saveTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingTime">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minTimeAllowed" ordered="false"
+        eType="#//Time" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxTimeAllowed" ordered="false"
+        eType="#//Time" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptableJitter" ordered="false"
+        eType="#//Time" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//TimeUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimeUnit">
+    <eLiterals name="ns"/>
+    <eLiterals name="ms" value="1"/>
+    <eLiterals name="s" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MemoryConsumed">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acceptableDelta" ordered="false"
+        eType="#//Memory" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="minMemoryAllowed" ordered="false"
+        eType="#//Memory" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="maxMemoryAllowed" ordered="false"
+        eType="#//Memory" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Memory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" ordered="false" lowerBound="1"
+        eType="#//MemoryUnit"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MemoryUnit">
+    <eLiterals name="Bytes"/>
+    <eLiterals name="KB" value="1"/>
+    <eLiterals name="MB" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ContactPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="updationTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReminderPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notifyTime" ordered="false"
+        lowerBound="1" eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VolumeControllerPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decreaseTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="increaseTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkPerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="networkKind" ordered="false"
+        lowerBound="1" eType="#//NetworkKind"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responseTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uploadTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NetworkKind">
+    <eLiterals name="WiFi"/>
+    <eLiterals name="_3G" value="1"/>
+    <eLiterals name="_4G" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GPSPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationFinderTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CameraPerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cameraSide" ordered="false"
+        lowerBound="1" eType="#//CameraSide"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swtichOnTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="captureTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="saveTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CameraSide">
+    <eLiterals name="Front"/>
+    <eLiterals name="Back" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CallPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dialTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="recieveTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GalleryPerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mediaType" ordered="false"
+        lowerBound="1" eType="#//MediaType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MediaType">
+    <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+      <details key="baseType" value="MusicType"/>
+    </eAnnotations>
+    <eLiterals name="Image"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MusicType">
+    <eLiterals name="Audio"/>
+    <eLiterals name="Video" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MusicPlayerPerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="musicType" ordered="false"
+        lowerBound="1" eType="#//MusicType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RingtonePerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ringTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NotificationPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notificationTime" ordered="false"
+        lowerBound="1" eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RadioPerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radioType" ordered="false"
+        lowerBound="1" eType="#//RadioType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RadioType">
+    <eLiterals name="AM"/>
+    <eLiterals name="FM" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MessagePerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="messageType" ordered="false"
+        lowerBound="1" eType="#//MessageType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="creationTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sendTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MessageType">
+    <eLiterals name="SMS"/>
+    <eLiterals name="MMS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServicePerformance">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="serviceType" ordered="false"
+        lowerBound="1" eType="#//ServiceType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="executionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="shiftTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ServiceType">
+    <eLiterals name="Background"/>
+    <eLiterals name="Foreground" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatabasePerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="insertionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="updationTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="deletionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalMemoryPerformance">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="saveTime" ordered="false"
+        eType="#//ProcessingTime" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="memoryConsumed" ordered="false"
+        lowerBound="1" eType="#//MemoryConsumed" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="energyConsumed" ordered="false"
+        lowerBound="1" eType="#//EnergyConsumed" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Introduction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="introduce" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Joinpoint">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="joinAt" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Before" eSuperTypes="#//Advice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="After" eSuperTypes="#//Advice"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Around" eSuperTypes="#//Advice"/>
+</ecore:EPackage>
